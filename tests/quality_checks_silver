@@ -1,5 +1,25 @@
+/*
+===============================================================================
+Quality Checks
+===============================================================================
+Script Purpose:
+    This script performs various quality checks for data consistency, accuracy, 
+    and standardization across the 'silver' layer. It includes checks for:
+    - Null or duplicate primary keys.
+    - Unwanted spaces in string fields.
+    - Data standardization and consistency.
+    - Invalid date ranges and orders.
+    - Data consistency between related fields.
 
---crm_cust_info
+Usage Notes:
+    - Run these checks after data loading Silver Layer.
+    - Investigate and resolve any discrepancies found during the checks.
+===============================================================================
+*/
+
+-- ====================================================================
+-- Checking 'silver.crm_cust_info'
+-- ====================================================================
 -- Check for Nulls or Duplicate in Primary Key
 -- Expectation: No Result
 
@@ -33,7 +53,9 @@ FROM bronze.crm_cust_info;
 SELECT DISTINCT cst_marital_status
 FROM bronze.crm_cust_info;
 
--- crm_prod_info
+-- ====================================================================
+-- Checking 'silver.crm_prd_info'
+-- ====================================================================
 -- Check for Nulls or Duplicate in Primary Key
 -- Expectation: No Result
 
@@ -66,7 +88,9 @@ SELECT *
 FROM bronze.crm_prd_info
 WHERE prd_end_dt < prd_start_dt;
 
---crm_sales_details
+-- ====================================================================
+-- Checking 'silver.crm_sales_details'
+-- ====================================================================
 
 -- Checking unwabted spaces in sls_ord_num
   SELECT
@@ -169,9 +193,12 @@ WHERE prd_end_dt < prd_start_dt;
   ORDER BY sls_sales, sls_quantity, sls_price; 
 
   -- ERP
-  -- 
-  
-  -- Identify Out-of-Range Date
+
+-- ====================================================================
+-- Checking 'silver.erp_cust_az12'
+-- ====================================================================
+ -- Identify Out-of-Range Date
+ -- Expectation: Birthdates between 1924-01-01 and Today
   SELECT
   bdate
   FROM bronze.erp_cust_az12
@@ -181,11 +208,17 @@ WHERE prd_end_dt < prd_start_dt;
   SELECT DISTINCT gen
   FROM bronze.erp_cust_az12
 
+  -- ====================================================================
+-- Checking 'silver.erp_loc_a101'
+-- ====================================================================
   -- Data Standardization & Consistency
   select distinct cntry
   FROM bronze.erp_loc_a101
   order by cntry;
 
+  -- ====================================================================
+-- Checking 'silver.erp_px_cat_g1v2'
+-- ====================================================================
   -- Check for unwanted spaces
   select * from bronze.erp_px_cat_g1v2
   where cat != trim(cat) or subcat != trim(subcat) OR maintenance != trim(maintenance);
