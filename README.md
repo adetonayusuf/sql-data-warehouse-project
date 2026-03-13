@@ -15,7 +15,7 @@
 
 Welcome to the **Data Warehouse and Analytics Project** repository!
 
-This project demonstrates a full data lifecycle — from raw data ingestion to advanced business analytics — across three distinct phases:
+This project demonstrates a full data lifecycle from raw data ingestion to advanced business analytics, across three distinct phases:
 
 | Phase | Domain | What It Covers |
 |-------|--------|----------------|
@@ -29,7 +29,7 @@ Designed as a **portfolio project**, it showcases industry best practices in dat
 
 ## 🏛️ Data Architecture
 
-The warehouse is built on the **Medallion Architecture** — a layered design pattern that ensures data quality, traceability, and analytical readiness at every stage.
+The warehouse is built on the **Medallion Architecture**  a layered design pattern that ensures data quality, traceability, and analytical readiness at every stage.
 
 
 ![Data Architecture](https://github.com/adetonayusuf/sql-data-warehouse-project/blob/main/doc/Data-Architecture.png)
@@ -93,13 +93,13 @@ sql-data-warehouse-project/
 
 The diagram below illustrates the complete journey of data from raw source files through each Medallion layer to final reporting.
 
-![Data Flow](https://raw.githubusercontent.com/adetonayusuf/sql-data-warehouse-project/main/doc/data_flow.png)
+![Data Flow](https://github.com/adetonayusuf/sql-data-warehouse-project/blob/main/doc/data-flow.gif)
 
 ---
 
 ## 🗃️ Data Model
 
-The Gold layer is structured as a **Star Schema** — one central fact table joined to two dimension tables — optimised for fast analytical queries.
+The Gold layer is structured as a **Star Schema** - one central fact table joined to two dimension tables — optimised for fast analytical queries.
 
 ![Data Model](https://raw.githubusercontent.com/adetonayusuf/sql-data-warehouse-project/main/doc/data_models.png)
 
@@ -365,9 +365,9 @@ See the [LICENSE](LICENSE) file for full details.
 **Adetona Yusuf Olalekan**
 *Professional Accountant | Data Analyst & Data Engineer*
 
-I'm passionate about turning raw data into actionable insights that drive organisational performance. With a background in accounting and a strong interest in data engineering, I build end-to-end data solutions — from pipeline architecture through to analytical reporting — that solve real business problems.
+I'm passionate about turning raw data into actionable insights that drive organisational performance. With a background in accounting and a strong interest in data engineering, I build end-to-end data solutions from pipeline architecture through to analytical reporting that solve real business problems.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/adetonayusuf)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yusuf-adetona/)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/adetonayusuf)
 
 ---
