@@ -31,7 +31,7 @@ Designed as a **portfolio project**, it showcases industry best practices in dat
 
 The warehouse is built on the **Medallion Architecture** — a layered design pattern that ensures data quality, traceability, and analytical readiness at every stage.
 
-![Data Architecture](https://raw.githubusercontent.com/adetonayusuf/sql-data-warehouse-project/main/doc/data_architecture.png)
+![Data Architecture](https://github.com/adetonayusuf/sql-data-warehouse-project/blob/main/doc/Data-Architecture.png)
 
 | Layer | Name | Description |
 |-------|------|-------------|
