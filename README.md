@@ -103,6 +103,7 @@ The Gold layer is structured as a **Star Schema** - one central fact table joine
 
 ![Schema](https://github.com/adetonayusuf/sql-data-warehouse-project/blob/main/doc/Schema.png)
 
+
 | Object | Type | Description |
 |--------|------|-------------|
 | `gold.dim_customers` | View | Customer profiles enriched with demographic data |
@@ -116,6 +117,7 @@ The Gold layer is structured as a **Star Schema** - one central fact table joine
 The ETL process loads and transforms data across all three layers via SQL Server stored procedures.
 
 ![Data Architecture](https://github.com/adetonayusuf/sql-data-warehouse-project/blob/main/doc/Data-Architecture.png)
+
 
 ### 🥉 Bronze — Raw Ingestion
 Bulk loads all source CSV files into SQL Server with execution time logging and row count validation.
@@ -331,7 +333,7 @@ SELECT * FROM gold.report_products;
 | [`doc/data_catalog.md`](doc/data_catalog.md) | Field-level metadata, data types, and descriptions for all tables |
 | [`doc/naming_conventions.md`](doc/naming_conventions.md) | Naming standards for schemas, tables, columns, and stored procedures |
 | [`doc/data_Architecture.png`](doc/data_Architecture.png) | Medallion architecture overview diagram |
-| [`doc/data_flow.gif`](doc/data_flow.git) | End-to-end data flow from source to Gold |
+| [`doc/data_flow.gif`](doc/data_flow.gif) | End-to-end data flow from source to Gold |
 | [`doc/schema.png`](doc/schema.png) | Star schema ER diagram |
 
 ---
