@@ -101,7 +101,7 @@ The diagram below illustrates the complete journey of data from raw source files
 
 The Gold layer is structured as a **Star Schema** - one central fact table joined to two dimension tables — optimised for fast analytical queries.
 
-![Data Model](https://raw.githubusercontent.com/adetonayusuf/sql-data-warehouse-project/main/doc/data_models.png)
+![Schema](https://github.com/adetonayusuf/sql-data-warehouse-project/blob/main/doc/Schema.png)
 
 | Object | Type | Description |
 |--------|------|-------------|
@@ -115,7 +115,7 @@ The Gold layer is structured as a **Star Schema** - one central fact table joine
 
 The ETL process loads and transforms data across all three layers via SQL Server stored procedures.
 
-![ETL Methods](https://raw.githubusercontent.com/adetonayusuf/sql-data-warehouse-project/main/doc/etl.png)
+![Data Architecture](https://github.com/adetonayusuf/sql-data-warehouse-project/blob/main/doc/Data-Architecture.png)
 
 ### 🥉 Bronze — Raw Ingestion
 Bulk loads all source CSV files into SQL Server with execution time logging and row count validation.
@@ -168,7 +168,7 @@ After the warehouse was built and loaded, a structured EDA was performed directl
 
 ## 📊 Advanced SQL Analytics
 
-📄 **Script:** [`scripts/analysis/02_advanced_analysis.sql`](scripts/analysis/02_advanced_analysis.sql)
+📄 **Script:** [`scripts/analysis/02_advanced_analytics.sql`](scripts/analysis/02_advanced_analytics.sql)
 
 Building on the EDA, this script delivers deeper analytical insights and two reusable reporting views that serve as the foundation for BI dashboards and stakeholder reports.
 
@@ -330,10 +330,9 @@ SELECT * FROM gold.report_products;
 |----------|-------------|
 | [`doc/data_catalog.md`](doc/data_catalog.md) | Field-level metadata, data types, and descriptions for all tables |
 | [`doc/naming_conventions.md`](doc/naming_conventions.md) | Naming standards for schemas, tables, columns, and stored procedures |
-| [`doc/data_architecture.png`](doc/data_architecture.png) | Medallion architecture overview diagram |
-| [`doc/data_flow.png`](doc/data_flow.png) | End-to-end data flow from source to Gold |
-| [`doc/data_models.png`](doc/data_models.png) | Star schema ER diagram |
-| [`doc/etl.png`](doc/etl.png) | ETL methods and techniques |
+| [`doc/data_Architecture.png`](doc/data_Architecture.png) | Medallion architecture overview diagram |
+| [`doc/data_flow.gif`](doc/data_flow.git) | End-to-end data flow from source to Gold |
+| [`doc/schema.png`](doc/schema.png) | Star schema ER diagram |
 
 ---
 
